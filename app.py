@@ -35,6 +35,20 @@ def workerportal():
 @app.route('/workerComp')
 def workercomp():
        return flask.render_template('workerComp.html')
+       
+@app.route('/equipment')
+def equipment():
+       equipmentList = ["Tractors", "Cultivator", "Harrow", "Subsoiler", "Plough"]
+       equipmentNumAvailability = [5, 5, 3, 4, 10]
+       equipmentMaxHours = 10
+       equipmentCurrentRenters = "N/A"
+       return flask.render_template(
+              "equipment.html",
+              equipmentList = equipmentList[:],
+              equipmentNumAvailability = equipmentNumAvailability[:],
+              equipmentMaxHours = equipmentMaxHours,
+              equipmentCurrentRenters = equipmentCurrentRenters
+              )
 
 app.run(
        host = os.getenv('IP','0.0.0.0'),
