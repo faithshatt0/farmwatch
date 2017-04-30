@@ -50,22 +50,18 @@
            <th>&nbsp;&nbsp;Saturday&nbsp;&nbsp;</th>
          </tr>
          
-         {% for i in range [num] %}
-         <td> {{ time[i] }} </td>
-         
-         {% if(date[num][3] == "3") %}
-              <td> {{ field[i] }}
-                   {{ action[i] }}
-                   {{ numWorkers[i] }} </td>
-              
-         {% elif(date[num][3] == i + 1) %}
-              <td> {{ field[i] }}
-                   {{ action[i] }}
-                   {{ numWorkers[i] }} </td>
-         {% else %}
-              <td></td>
-         {% endif %}
-         {% endfor%}
+        <td> {{ time[0] }} </td>
+        <td>
+             {{ action[0] }} <br>
+             Field: {{ field[0] }} <br>
+             Workers: {{ numWorkers[0] }} </td>
+             
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
          
        </table>
 
