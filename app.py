@@ -4,7 +4,7 @@ import os
 app = flask.Flask(__name__)
 
 #root or basic page
-@app.route('/')
+@app.route('/agcompanies')
 def root():
        return flask.render_template('AgCompanies.html')
 
