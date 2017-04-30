@@ -28,14 +28,13 @@
 <body>
   <div id="banner">
     <div id="banner-content">
-     <center><font size="3" color="white" font-family="verdana"><a href = '/'>Home</a>  |  <a href = '/farmerportal'>Farmer Portal</a>  |  <a href = '/farmersconnect'>Farmers Connect</a>  |   <a href = '/equipment'>Equipment</a></font></center>
+     <center><font size="2" color="white" face="verdana"><a href = '/'>Back Home</a></font></center>
     </div>
   </div>
   <div id="main-content">
-      {% for i in range(10) %}
-      <br>
-      {% endfor %}
-      <center><h1>Chat Board</h1></center>
-      <center><p><img src = 'http://blog.chatwee.com/wp-content/uploads/2013/12/chat-box-widget.jpg'</p></center>
+     {% for i in range (5) %}
+     <br>
+     {% endfor %}
+    {{ output }}
   </div>
 </body>

@@ -1,0 +1,66 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Test</title>
+    <style type="text/css" media="screen">
+     * {
+       margin: 0; 
+       padding: 0;
+     }
+     div#banner { 
+       position: absolute; 
+       top: 0; 
+       left: 0; 
+       background-color: #00673C; 
+       width: 100%; 
+     }
+     div#banner-content { 
+       width: 550px; 
+       margin: 0 auto; 
+       padding: 70px; 
+       border: 1px solid #000;
+     }
+     div#main-content { 
+       padding-top: 70px;
+    }
+    .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    </style>
+</head>
+
+<body>
+  <div id="banner">
+    <div id="banner-content">
+     <center><font size="3" color="white" font-family="verdana"><a href = '/'>Home</a>  |  <a href = '/availability'>Your Availability</a>  |  <a href = '/workerComp'>Report/Complaint</a></font></center>
+    </div>
+  </div>
+  <div id="main-content">
+     {% for i in range (5) %}
+     <br>
+     {% endfor %}
+    <center>
+        <form>
+            Enter name: <br>
+            <input type = "text" /><br>
+            Select Day Available to work to add to your schedule:<br>
+            <input type="radio" name="Days"/><label>Monday</label>
+            <input type="radio" name="Days"/><label>Tuesday</label>
+            <input type="radio" name="Days"/><label>Wednesday</label>
+            <input type="radio" name="Days"/><label>Thursday</label>
+            <input type="radio" name="Days"/><label>Friday</label>
+            <input type="radio" name="Days"/><label>Saturday</label>
+            <input type="radio" name="Days"/><label>Sunday</label><br>
+            <a href = '/availability' class = "button">Submit</a> <brb/>
+        </form>
+    </center>
+  </div>
+</body>
