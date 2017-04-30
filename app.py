@@ -55,6 +55,10 @@ def safety():
        output = Markup(pennStateDiv[:])
        return flask.render_template("safety.html", output = output)
 
+@app.route('/availability')
+def availability():
+       return flask.render_template("availability.html")
+
 app.run(
        host = os.getenv('IP','0.0.0.0'),
        port = int(os.getenv('PORT', 8080)))
