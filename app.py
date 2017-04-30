@@ -5,11 +5,11 @@ from flask import Flask, render_template, request, redirect, url_for
 app = flask.Flask(__name__)
 
 num = 1
-date = ""
-time = ""
-field = ""
-action = ""
-numWorkers = ""
+date = []
+time = []
+field = []
+action = []
+numWorkers = []
 
 #root or basic page
 @app.route('/agcompanies')
@@ -18,21 +18,19 @@ def agcompanies():
 
 @app.route('/schedule')
 def schedule():
-       return flask.render_template('calendarPage.html')
+       return flask.render_template('calendarPage.html', date=date , time=time , field=field , action=action , numWorkers=numWorkers, num=num)
 
 @app.route('/addevent', methods = ['GET', 'POST'])
 def addEvent():
+       num = len(action)
        if request.method == "POST":
-              date = request.form['date']
-              time = request.form['time']
-              print date
-              print time
-              field = request.form['field']
-              action = request.form['action']
-              numWorkers = request.form['numWorkers']
+              date.append(request.form['date'])
+              time.append(request.form['time'])
+              field.append(request.form['field'])
+              action.append(request.form['action'])
+              numWorkers.append(request.form['numWorkers'])
               
-              num = num + 1
-              return redirect(url_for('calendarPage.html', date=date , time=time , field=field , action=action , numWorkers=numWorkers, num=num))
+              return redirect(url_for('schedule'))
        return flask.render_template('addevent.html')
        
 
