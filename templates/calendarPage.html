@@ -1,0 +1,91 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Ag Companies</title>
+    <style type="text/css" media="screen">
+     * {
+       margin: 0; 
+       padding: 0;
+     }
+
+     div#banner { 
+       position: absolute; 
+       top: 0; 
+       left: 0; 
+       background-color: #00673C; 
+       width: 100%; 
+     }
+     div#banner-content { 
+       width: 600px; 
+       margin: 0 auto; 
+       padding: 70px; 
+     }
+     div#main-content { 
+       padding-top: 250px;
+       
+    }
+    table, th, td {
+          border: 1px solid black;
+    }
+    </style>
+</head>
+
+<body>
+  <div id="banner">
+    <div id="banner-content">
+     <font size="2" color="white" face="verdana">Home  |  Farmer's Connect  |  Equipment Log  |  Worker's Schedules</font>
+    </div>
+  </div>
+  
+  <div id="main-content">
+    <center>
+       <table>
+         <tr>
+           <th>&nbsp;&nbsp;Time&nbsp;&nbsp;</th>         
+           <th>&nbsp;&nbsp;Sunday&nbsp;&nbsp;</th>
+           <th>&nbsp;&nbsp;Monday&nbsp;&nbsp;</th>
+           <th>&nbsp;&nbsp;Tuesday&nbsp;&nbsp;</th>
+           <th>&nbsp;&nbsp;Wednesday&nbsp;&nbsp;</th>
+           <th>&nbsp;&nbsp;Thursday&nbsp;&nbsp;</th>
+           <th>&nbsp;&nbsp;Friday&nbsp;&nbsp;</th>
+           <th>&nbsp;&nbsp;Saturday&nbsp;&nbsp;</th>
+         </tr>
+         
+         {% for i in range [num] %}
+         <td> {{ time[i] }} </td>
+         
+         {% if(date[num][3] == "3") %}
+              <td> {{ field[i] }}
+                   {{ action[i] }}
+                   {{ numWorkers[i] }} </td>
+              
+         {% elif(date[num][3] == i + 1) %}
+              <td> {{ field[i] }}
+                   {{ action[i] }}
+                   {{ numWorkers[i] }} </td>
+         {% else %}
+              <td></td>
+         {% endif %}
+         {% endfor%}
+         
+       </table>
+
+       <p><a href = '/addevent'>Add Event</a></p>
+
+
+    </center>
+
+  </div>
+
+<!--<script>
+function myFunction() {
+    var x = document.getElementById('myDIV');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>-->
+
+</body
+

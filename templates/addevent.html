@@ -1,0 +1,76 @@
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Ag Companies</title>
+    
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    
+    <style type="text/css" media="screen">
+     * {
+       margin: 0; 
+       padding: 0;
+     }
+
+     div#banner { 
+       position: absolute; 
+       top: 0; 
+       left: 0; 
+       background-color: #00673C; 
+       width: 100%; 
+     }
+     div#banner-content { 
+       width: 600px; 
+       margin: 0 auto; 
+       padding: 70px; 
+     }
+     div#main-content { 
+       padding-top: 250px;
+       
+    }
+    table, th, td {
+          border: 2px solid black;
+    }
+    </style>
+</head>
+
+<script>
+submitForms = function(){
+    document.forms["date"].submit();
+    document.forms["time"].submit();
+    document.forms["field"].submit();
+    document.forms["action"].submit();
+}
+</script>
+
+<center>
+<body>
+       <div id="banner">
+        <button class="btn btn-primary">Farmassist Home</button>
+        <button class="btn btn-success">Farmer's Connect</button>
+        <button class="btn btn-warning">Equipment Log</button>
+        <button class="btn btn-info">Worker's Schedules</button>
+        <button class="btn btn-danger">Help</button>
+        
+       </div>
+       
+       <div id="main-content">
+              
+              <h1> <font face="calibri"> To add an event, please fill out the parameters provided below. . .</font></h1>
+              
+              <form action="/addevent" method="post"> <!--Form to connect with python file via flask-->
+                  <font face="calibri" color="black" size = '4'> Enter Date: </font> <input style ="search-align:center" type="text/css" name="date"> <br>
+                  <font face="calibri" color="black" size = '4'> Enter Time: </font> <input style ="search-align:center" type="text/css" name="time"> <br>
+                  <font face="calibri" color="black" size = '4'> Enter Field: </font> <input style ="search-align:center" type="text/css" name="field"> <br>
+                  <font face="calibri" color="black" size = '4'> Enter Action: </font> <input style ="search-align:center" type="text/css" name="action"> <br>
+                  <font face="calibri" color="black" size = '4'> Enter # of Workers: </font> <input style ="search-align:center" type="text/css" name="numWorkers"> <br>
+                  <input type="submit" value="Submit" onclick="submitForms()"> <brb/>
+              </form>
+              
+       </div>
+
+</body>
+</center>
