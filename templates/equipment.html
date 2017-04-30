@@ -25,3 +25,38 @@
     }
     </style>
 </head>
+
+<body>
+    <div id="banner">
+    <div id="banner-content">
+     <font size="3" color="white" font-family="verdana"><a href = '/'>Home</a>  |  <a href = '/'>Equipment Log</a>  |  <a href = '/'>Farmers Connect</a></font>
+    </div>
+  </div>
+  <div id="main-content">
+      {% for i in range (5) %}
+     <br>
+     {% endfor %}
+    <center><table border = "1">
+        <tr>
+            <td><b>Equipment Name</b></td>
+            <td><b>Number Available</b></td>
+            <td><b>Max Hours</b></td>
+            <td><b>Current Renters</b></td>
+        </tr>
+        {% for i in range (5) %}
+        <tr>
+            <td>{{ equipmentList[i] }}</td>
+            <td>{{ equipmentNumAvailability[i] }}</td>
+            <td>{{ equipmentMaxHours }}</td>
+            <td>{{ equipmentCurrentRenters }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </center>
+    <center>
+        <button>Add Equipment</button>
+        <button>Check Out Equipment</button>
+    </center>
+  </div>
+    
+</body>
