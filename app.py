@@ -26,7 +26,13 @@ def coms():
        
 @app.route('/farmerportal')
 def farmerportal():
-       return flask.render_template('farmerportal.html')
+       num = 1
+       date = ["04/30/17", "05/01/17", "05/02/17", "05/03/17", "05/04/17", "05/05/17", "05/06/17"]  
+       time = ["3pm", "12pm", "1pm", "4pm", "9am", "7am", "11am"]
+       field = ["5","1","7","2","4","6","3"]
+       action = ["Spray Pesticide", "Spray Water", "Thin Fields", "Tractor Day", "Manual Labor"]
+       numWorkers = ["0","10","20","30","40"]
+       return flask.render_template('farmerportal.html', date=date , time=time , field=field , action=action , numWorkers=numWorkers, num=num)
 
 @app.route('/workerportal')
 def workerportal():
@@ -35,6 +41,10 @@ def workerportal():
 @app.route('/workerComp')
 def workercomp():
        return flask.render_template('workerComp.html')
+       
+@app.route('/farmersconnect')
+def farmersconnect():
+       return flask.render_template('farmersconnect.html')
 
 app.run(
        host = os.getenv('IP','0.0.0.0'),

@@ -1,13 +1,12 @@
-<!DOCTYPE html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Test</title>
+    <title>Ag Companies</title>
     <style type="text/css" media="screen">
      * {
        margin: 0; 
        padding: 0;
      }
-
      div#banner { 
        position: absolute; 
        top: 0; 
@@ -16,13 +15,16 @@
        width: 100%; 
      }
      div#banner-content { 
-       width: 550px; 
+       width: 600px; 
        margin: 0 auto; 
        padding: 70px; 
-       border: 1px solid #000;
      }
      div#main-content { 
-       padding-top: 70px;
+       padding-top: 250px;
+       
+    }
+    table, th, td {
+          border: 1px solid black;
     }
     </style>
 </head>
@@ -30,10 +32,79 @@
 <body>
   <div id="banner">
     <div id="banner-content">
-     <font size="3" color="white" font-family="verdana"><a href = '/'>Home</a>  |  <a href = '/'>Equipment Log</a>  |  <a href = '/'>Farmers Connect</a></font>
+     <font size="2" color="white" face="verdana">Home  |  Farmer's Connect  |  Equipment Log  |  Worker's Schedules</font>
     </div>
   </div>
+  
   <div id="main-content">
-    <p>Main page content goes here</p>
+    <center>
+       <table>
+         <tr>
+           <th>&nbsp;&nbsp;Sunday&nbsp;&nbsp;</th>
+           <th>&nbsp;&nbsp;Monday&nbsp;&nbsp;</th>
+           <th>&nbsp;&nbsp;Tuesday&nbsp;&nbsp;</th>
+           <th>&nbsp;&nbsp;Wednesday&nbsp;&nbsp;</th>
+           <th>&nbsp;&nbsp;Thursday&nbsp;&nbsp;</th>
+           <th>&nbsp;&nbsp;Friday&nbsp;&nbsp;</th>
+           <th>&nbsp;&nbsp;Saturday&nbsp;&nbsp;</th>
+         </tr>
+         
+        <td width = "15%">
+             {{ time[0] }} <br>
+             {{ action[0] }} <br>
+             Field: {{ field[0] }} <br>
+             Workers: {{ numWorkers[0] }} </td>
+             
+        <td width = "15%">
+             {{ time[1] }} <br>
+             {{ action[1] }} <br>
+             Field: {{ field[1] }} <br>
+             Workers: {{ numWorkers[1] }} </td>
+        <td width = "15%">
+             {{ time[2] }} <br>
+             {{ action[2] }} <br>
+             Field: {{ field[2] }} <br>
+             Workers: {{ numWorkers[2] }} </td>
+        <td width = "15%">
+             {{ time[3] }} <br>
+             {{ action[4] }} <br>
+             Field: {{ field[3] }} <br>
+             Workers: {{ numWorkers[4] }} </td>
+        <td width = "15%">
+             {{ time[4] }} <br>
+             {{ action[3] }} <br>
+             Field: {{ field[4] }} <br>
+             Workers: {{ numWorkers[1] }} </td>
+        <td bgcolor ="#85C1E9" width = "15%">
+             {{ time[5] }} <br>
+             {{ action[1] }} <br>
+             Field: {{ field[5] }} <br>
+             Workers: {{ numWorkers[0] }} 
+             </td>
+        <td width = "15%">
+             {{ time[6] }} <br>
+             {{ action[4] }} <br>
+             Field: {{ field[6] }} <br>
+             Workers: {{ numWorkers[4] }} </td>
+         
+       </table>
+
+       <p><a href = '/addevent'>Add Event</a></p>
+
+
+    </center>
+
   </div>
+
+<!--<script>
+function myFunction() {
+    var x = document.getElementById('myDIV');
+    if (x.style.display === 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+</script>-->
+
 </body>
