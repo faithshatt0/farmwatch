@@ -13,14 +13,29 @@ usdaDivs = [str(item).replace('\xa0','') for item in usdaDivs]
 #root or basic page
 @app.route('/')
 def root():
-       return flask.render_template('AgCompanies.html')
+       return flask.render_template('home.html')
 
 @app.route('/regulations')
 def regs():
        output = Markup(usdaDivs[:])
-       return flask.render_template('regulations.html',output = output[:])
+       return flask.render_template('regulations.html',output=output)
+       
+@app.route('/AgCompanies')
+def coms():
+       return flask.render_template('AgCompanies.html')
+       
+@app.route('/farmerportal')
+def farmerportal():
+       return flask.render_template('farmerportal.html')
+
+@app.route('/workerportal')
+def workerportal():
+       return flask.render_template('workerportal.html')
+       
+@app.route('/workerComp')
+def workercomp():
+       return flask.render_template('workerComp.html')
 
 app.run(
        host = os.getenv('IP','0.0.0.0'),
-       port = int(os.getenv('PORT', 8080)),
-       debug = True)
+       port = int(os.getenv('PORT', 8080)))

@@ -1,5 +1,42 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Test</title>
+    <style type="text/css" media="screen">
+     * {
+       margin: 0; 
+       padding: 0;
+     }
+
+     div#banner { 
+       position: absolute; 
+       top: 0; 
+       left: 0; 
+       background-color: #00673C; 
+       width: 100%; 
+     }
+     div#banner-content { 
+       width: 550px; 
+       margin: 0 auto; 
+       padding: 70px; 
+     }
+     div#main-content { 
+       padding-top: 70px;
+    }
+    </style>
+</head>
+
+<body>
+  <div id="banner">
+    <div id="banner-content">
+     <font size="3" color="white" font-family="verdana"><a href = '/'></a></font>
+    </div>
+  </div>
+  <div id="main-content">
+    <p></p>
+  </div>
+</body>
 <style type="text/css">
     @import url(http://fonts.googleapis.com/css?family=Open+Sans);
 body {
@@ -11,7 +48,7 @@ body {
 /* STRUCTURE */
 
 #pagewrap {
-  padding: 5px;
+  padding: 100px;
   width: 960px;
   margin: 20px auto;
 }
@@ -146,18 +183,22 @@ footer {
 		
 	<section id="content">
 		<center><h2>Farmer's Portal</h2></center>
-		<img src = 'http://www.nesare.org/var/ezflow_site/storage/images/media/images/northeast-sare-images/miscellaneous-useful-pix/black-farmer-for-banner-lowres/1010596-1-eng-US/black-farmer-for-banner-lowres_infoboximage.jpg'/>
+        <a href = '/farmerportal'><img src = 'http://www.nesare.org/var/ezflow_site/storage/images/media/images/northeast-sare-images/miscellaneous-useful-pix/black-farmer-for-banner-lowres/1010596-1-eng-US/black-farmer-for-banner-lowres_infoboximage.jpg'/></a>
 	</section>
 	
 	<section id="middle">
 		<center><h2>Public Info</h2></center>
-		<p>At full width all three columns will be displayed side by side. As the page is resized the third column will collapse under the first and second. At the smallest screen size all three columns will be stacked on top of one another.</p>
-		<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+		<p><a href = '/regulations'>Regulations</a></p>
+		<p><a href = '/safety'>Safety</a></p>
+		<p><a href = '/AgCompanies'>Ag Companies</a></p>
+		<br>
+		<p>The above links are different regulations and safety precautions.</p>
+		<p>There is also a list of different companies involved in agriculture.</p>
 	</section>
 
 	<aside id="sidebar">
-		<h2>Worker's Portal</h2>
-        <img src = 'http://www.nesare.org/var/ezflow_site/storage/images/media/images/northeast-sare-images/miscellaneous-useful-pix/black-farmer-for-banner-lowres/1010596-1-eng-US/black-farmer-for-banner-lowres_infoboximage.jpg'/>
+		<center><h2>Worker's Portal</h2></center>
+        <a href = '/workerportal'><img src = 'http://www.nesare.org/var/ezflow_site/storage/images/media/images/northeast-sare-images/miscellaneous-useful-pix/black-farmer-for-banner-lowres/1010596-1-eng-US/black-farmer-for-banner-lowres_infoboximage.jpg'/></a>
 	</aside>
 	
 	<footer>

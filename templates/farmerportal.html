@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Test</title>
@@ -6,6 +7,7 @@
        margin: 0; 
        padding: 0;
      }
+
      div#banner { 
        position: absolute; 
        top: 0; 
@@ -28,13 +30,10 @@
 <body>
   <div id="banner">
     <div id="banner-content">
-     <center><font size="2" color="white" face="verdana"><a href = '/'>Back Home</a></font></center>
+     <font size="3" color="white" font-family="verdana"><a href = '/'>Home</a>  |  <a href = '/'>Equipment Log</a>  |  <a href = '/'>Farmers Connect</a></font>
     </div>
   </div>
   <div id="main-content">
-     {% for i in range (5) %}
-     <br>
-     {% endfor %}
-    {{ output }}
+    <p>Main page content goes here</p>
   </div>
 </body>
