@@ -18,6 +18,12 @@ def agcompanies():
 
 @app.route('/schedule')
 def schedule():
+       num = 1
+       date = ["04/30/17", "05/01/17", "05/02/17", "05/03/17", "05/04/17", "05/05/17", "05/06/17"]  
+       time = ["3 - 5pm"]
+       field = ["5"]
+       action = ["Spray Pesticide"]
+       numWorkers = ["0"]
        return flask.render_template('calendarPage.html', date=date , time=time , field=field , action=action , numWorkers=numWorkers, num=num)
 
 @app.route('/addevent', methods = ['GET', 'POST'])
