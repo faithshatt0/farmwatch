@@ -2,6 +2,7 @@ import flask
 from flask import Markup
 import os
 from webScraping import *
+from webScrape2 import *
 
 app = flask.Flask(__name__)
 output = []
@@ -49,6 +50,10 @@ def equipment():
               equipmentMaxHours = equipmentMaxHours,
               equipmentCurrentRenters = equipmentCurrentRenters
               )
+@app.route('/safety')
+def safety():
+       output = Markup(pennStateDiv[:])
+       return flask.render_template("safety.html", output = output)
 
 app.run(
        host = os.getenv('IP','0.0.0.0'),
