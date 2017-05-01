@@ -2,12 +2,8 @@ import flask
 from flask import Markup
 import os
 from webScraping import *
-<<<<<<< HEAD
-from webScrape2 import *
-
-=======
 from webScrape import *
->>>>>>> Gilbert
+
 app = flask.Flask(__name__)
 output = []
 usdaDivs = [str(item).replace('\n','') for item in usdaDivs]
@@ -80,34 +76,10 @@ def workerportal():
 @app.route('/workerComp')
 def workercomp():
        return flask.render_template('workerComp.html')
-       
-<<<<<<< HEAD
-@app.route('/equipment')
-def equipment():
-       equipmentList = ["Tractors", "Cultivator", "Harrow", "Subsoiler", "Plough"]
-       equipmentNumAvailability = [5, 5, 3, 4, 10]
-       equipmentMaxHours = 10
-       equipmentCurrentRenters = "N/A"
-       return flask.render_template(
-              "equipment.html",
-              equipmentList = equipmentList[:],
-              equipmentNumAvailability = equipmentNumAvailability[:],
-              equipmentMaxHours = equipmentMaxHours,
-              equipmentCurrentRenters = equipmentCurrentRenters
-              )
-@app.route('/safety')
-def safety():
-       output = Markup(pennStateDiv[:])
-       return flask.render_template("safety.html", output = output)
 
 @app.route('/availability')
 def availability():
        return flask.render_template("availability.html")
-=======
-@app.route('/availability')
-def availability():
-       return flask.render_template('availability.html')
->>>>>>> Gilbert
 
 app.run(
        host = os.getenv('IP','0.0.0.0'),
