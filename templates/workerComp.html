@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Ag Companies</title>
+    <style type="text/css" media="screen">
+     * {
+       margin: 0; 
+       padding: 0;
+     }
+     div#banner { 
+       position: absolute; 
+       top: 0; 
+       left: 0; 
+       background-color: #00673C; 
+       width: 100%; 
+     }
+     div#banner-content { 
+       width: 600px; 
+       margin: 0 auto; 
+       padding: 70px; 
+     }
+     div#main-content { 
+       padding-top: 250px;
+       
+    }
+    table, th, td {
+          border: 1px solid black;
+    }
+    </style>
+</head>
 <body>
-
+  <div id="banner">
+    <div id="banner-content">
+     <center><font size="3" color="white" font-family="verdana"><a href = '/'>Home</a>  |  <a href = '/availability'>Your Availability</a>  |  <a href = '/workerComp'>Report/Complaint</a></font></center>
+    </div>
+  </div>
+<center>
+  {% for i in range(10) %}
+  <br>
+  {% endfor %}
 <form>
   Report/Complaint:<br>
   <input type="text" name=status value="">
   <br><br>
   <input type="submit" value="Submit">
 </form> 
+</center>
 
-<p>Clicking the submit button will submit your report/complaint.</p>
+<center><p>Clicking the submit button will submit your report/complaint.</p></center>
 
 </body>
 </html>

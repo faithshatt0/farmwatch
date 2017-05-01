@@ -10,8 +10,6 @@ data = r.text
 
 soup = BeautifulSoup(data, "html5lib")
 
-soup = BeautifulSoup(data, "html5lib")
-
 usdaDivs = soup.find_all('div', attrs={'id' : 'block-usda-content'})
 
 
